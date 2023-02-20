@@ -19,5 +19,5 @@ from contas.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('contas/', home)
+    path('home/', home)
 ]
