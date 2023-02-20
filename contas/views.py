@@ -5,6 +5,9 @@ import datetime
 # Create your views here.
 
 def home(request):
-    now = datetime.datetime.now()
-    # html = "<html><body style='font-family: Verdana, sans-serif;'>It is now %s</body></html>" % now
-    return render(request, 'contas/home.html')
+    data = {}
+
+    data['now'] = datetime.datetime.now()
+    data['transacoes'] = ['t1', 't2', 't3']
+
+    return render(request, 'contas/home.html', data)

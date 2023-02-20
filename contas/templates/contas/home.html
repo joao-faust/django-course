@@ -9,16 +9,37 @@
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        h1 {
+        .container {
+            max-width: 900px;
+            margin: auto;
+            border: 5px solid #000;
+            padding: 20px;
+        }
+        h1, p {
             text-align: center;
-            font-weight: 200;
-            margin-top: 20px;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 </head>
 <body>
 
-    <h1>Seja Bem Vindo Meu Caro Amigo</h1>
+    <div class="container">
+        <h1>Seja Bem Vindo Meu Caro Amigo</h1>
+        <p>Agora são {{ now }}</p>
+        <ul>
+            {% for transacao in transacoes  %}
+                {% if transacao == 't1' %}
+                    <li><strong>{{ transacao }}</strong></li>
+                {% else %}
+                    <li>{{ transacao }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
 
 </body>
 </html>
