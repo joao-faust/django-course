@@ -1,0 +1,6 @@
+django-admin startproject controle_gastos - Creates a project;
+python manage.py startapp contas - Creates an app;
+python manage.py migrate - Creates all the migrations based on the models;
+python manage.py makemigrations - Runs the migrations. Basically it converts the migrations into database tables;
+python manage.py createsuperuser - Creates a super user;
+python manage.py runserver - Starts the project.
